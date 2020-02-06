@@ -1,36 +1,36 @@
 <?php
 
-namespace DesignPatterns\AbstractFactory;
-
-/**
- * Class HtmlFactory
- *
- * HtmlFactory is a concrete factory for HTML component
- */
-class HtmlFactory extends AbstractFactory
-{
-    /**
-     * Creates a picture component
-     *
-     * @param string $path
-     * @param string $name
-     *
-     * @return Html\Picture|Picture
-     */
-    public function createPicture($path, $name = '')
-    {
-        return new Html\Picture($path, $name);
-    }
+    namespace DesignPatterns\AbstractFactory;
 
     /**
-     * Creates a text component
+     * Class HtmlFactory
      *
-     * @param string $content
-     *
-     * @return Html\Text|Text
+     * HtmlFactory is a concrete factory for HTML component
      */
-    public function createText($content)
+    class HtmlFactory extends AbstractFactory
     {
-        return new Html\Text($content);
+        /**
+         * Creates a picture component
+         *
+         * @param string $path
+         * @param string $name
+         *
+         * @return Html\Picture|Picture
+         */
+        public function createPicture($path, $name = '')
+        {
+            return new Html\Picture($path, $name);
+        }
+
+        /**
+         * Creates a text component
+         *
+         * @param string $content
+         *
+         * @return Html\Text|Text
+         */
+        public function createText($content)
+        {
+            return new Html\Text($content);
+        }
     }
-}

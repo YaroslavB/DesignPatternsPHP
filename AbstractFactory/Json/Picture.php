@@ -1,23 +1,23 @@
 <?php
 
-namespace DesignPatterns\AbstractFactory\Json;
+    namespace DesignPatterns\AbstractFactory\Json;
 
-use DesignPatterns\AbstractFactory\Picture as BasePicture;
+    use DesignPatterns\AbstractFactory\Picture as BasePicture;
 
-/**
- * Class Picture
- *
- * Picture is a concrete image for JSON rendering
- */
-class Picture extends BasePicture
-{
     /**
-     * some crude rendering from JSON output
+     * Class Picture
      *
-     * @return string
+     * Picture is a concrete image for JSON rendering
      */
-    public function render()
+    class Picture extends BasePicture
     {
-        return json_encode(array('title' => $this->name, 'path' => $this->path));
+        /**
+         * some crude rendering from JSON output
+         *
+         * @return string
+         */
+        public function render()
+        {
+            return json_encode(array('title' => $this->name, 'path' => $this->path));
+        }
     }
-}

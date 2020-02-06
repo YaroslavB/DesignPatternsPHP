@@ -1,22 +1,22 @@
 <?php
 
-namespace DesignPatterns\AbstractFactory;
-
-/**
- * Class Text
- */
-abstract class Text implements MediaInterface
-{
-    /**
-     * @var string
-     */
-    protected $text;
+    namespace DesignPatterns\AbstractFactory;
 
     /**
-     * @param string $text
+     * Class Text
      */
-    public function __construct($text)
+    abstract class Text implements MediaInterface
     {
-        $this->_text = (string) $text;
+        /**
+         * @var string
+         */
+        protected $text;
+
+        /**
+         * @param string $text
+         */
+        public function __construct($text)
+        {
+            $this->_text = (string)$text;
+        }
     }
-}

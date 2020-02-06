@@ -1,23 +1,23 @@
 <?php
 
-namespace DesignPatterns\AbstractFactory\Html;
+    namespace DesignPatterns\AbstractFactory\Html;
 
-use DesignPatterns\AbstractFactory\Picture as BasePicture;
+    use DesignPatterns\AbstractFactory\Picture as BasePicture;
 
-/**
- * Class Picture
- *
- * Picture is a concrete image for HTML rendering
- */
-class Picture extends BasePicture
-{
     /**
-     * some crude rendering from HTML output
+     * Class Picture
      *
-     * @return string
+     * Picture is a concrete image for HTML rendering
      */
-    public function render()
+    class Picture extends BasePicture
     {
-        return sprintf('<img src="%s" title="$s"/>', $this->path, $this->name);
+        /**
+         * some crude rendering from HTML output
+         *
+         * @return string
+         */
+        public function render()
+        {
+            return sprintf('<img src="%s" title="$s"/>', $this->path, $this->name);
+        }
     }
-}

@@ -1,30 +1,30 @@
 <?php
 
-namespace DesignPatterns\AbstractFactory;
-
-/**
- * Class Picture
- */
-abstract class Picture implements MediaInterface
-{
+    namespace DesignPatterns\AbstractFactory;
 
     /**
-     * @var string
+     * Class Picture
      */
-    protected $path;
-
-    /**
-     * @var string
-     */
-    protected $name;
-
-    /**
-     * @param string $path
-     * @param string $name
-     */
-    public function __construct($path, $name = '')
+    abstract class Picture implements MediaInterface
     {
-        $this->name = (string) $name;
-        $this->path = (string) $path;
+
+        /**
+         * @var string
+         */
+        protected $path;
+
+        /**
+         * @var string
+         */
+        protected $name;
+
+        /**
+         * @param string $path
+         * @param string $name
+         */
+        public function __construct($path, $name = '')
+        {
+            $this->name = (string)$name;
+            $this->path = (string)$path;
+        }
     }
-}

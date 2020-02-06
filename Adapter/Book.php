@@ -1,25 +1,25 @@
 <?php
 
-namespace DesignPatterns\Adapter;
-
-/**
- * Book is a concrete and standard paper book
- */
-class Book implements PaperBookInterface
-{
-    /**
-     * {@inheritdoc}
-     */
-    public function open()
-    {
-
-    }
+    namespace DesignPatterns\Adapter;
 
     /**
-     * {@inheritdoc}
+     * Book is a concrete and standard paper book
      */
-    public function turnPage()
+    class Book implements PaperBookInterface
     {
+        /**
+         * {@inheritdoc}
+         */
+        public function open()
+        {
 
+        }
+
+        /**
+         * {@inheritdoc}
+         */
+        public function turnPage()
+        {
+
+        }
     }
-}

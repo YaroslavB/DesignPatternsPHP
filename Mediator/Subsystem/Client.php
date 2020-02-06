@@ -1,29 +1,29 @@
 <?php
 
-namespace DesignPatterns\Mediator\Subsystem;
+    namespace DesignPatterns\Mediator\Subsystem;
 
-use DesignPatterns\Mediator\Colleague;
-
-/**
- * Client is a client that make request et get response
- */
-class Client extends Colleague
-{
-    /**
-     * request
-     */
-    public function request()
-    {
-        $this->getMediator()->makeRequest();
-    }
+    use DesignPatterns\Mediator\Colleague;
 
     /**
-     * output content
-     *
-     * @param string $content
+     * Client is a client that make request et get response
      */
-    public function output($content)
+    class Client extends Colleague
     {
-        echo $content;
+        /**
+         * request
+         */
+        public function request()
+        {
+            $this->getMediator()->makeRequest();
+        }
+
+        /**
+         * output content
+         *
+         * @param string $content
+         */
+        public function output($content)
+        {
+            echo $content;
+        }
     }
-}

@@ -1,29 +1,29 @@
 <?php
 
-namespace DesignPatterns\Decorator;
+    namespace DesignPatterns\Decorator;
 
-/**
- * Class RenderInXml
- */
-class RenderInXml extends Decorator
-{
     /**
-     * render data as XML
-     *
-     * @return mixed|string
+     * Class RenderInXml
      */
-    public function renderData()
+    class RenderInXml extends Decorator
     {
-        $output = $this->wrapped->renderData();
+        /**
+         * render data as XML
+         *
+         * @return mixed|string
+         */
+        public function renderData()
+        {
+            $output = $this->wrapped->renderData();
 
-        // do some fancy conversion to xml from array ...
+            // do some fancy conversion to xml from array ...
 
-        $doc = new \DOMDocument();
+            $doc = new \DOMDocument();
 
-        foreach ($output as $key => $val) {
-            $doc->appendChild($doc->createElement('foo', 'bar'));
+            foreach ($output as $key => $val) {
+                $doc->appendChild($doc->createElement('foo', 'bar'));
+            }
+
+            return $doc->saveXML();
         }
-
-        return $doc->saveXML();
     }
-}
